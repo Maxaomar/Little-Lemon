@@ -12,6 +12,11 @@ function Main() {
                 <h2>Menu</h2>
                 <p>Explore our delicious offerings...</p>
             </section>
+
+            <section>
+                <h2>Reservations</h2>
+                <p>Reserve your table and enjoy a wonderful experience...</p>
+            </section>
         </main>
     );
 }

@@ -1,38 +1,152 @@
-.App {
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Grid Layout for Main Structure */
+.app-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+header,
+nav,
+main,
+footer {
+  padding: 1rem;
+}
+
+header {
+  background-color: #ffedd5;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
+}
+
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    grid-template-rows: auto 1fr auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  /* Choose a clean, readable font */
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  /* Light background for the page */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Georgia', serif;
+  /* Elegant serif for headings */
+  margin-bottom: 10px;
+  color: #333;
+  /* Dark color for headings */
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333333;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #555555;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #666666;
+}
+
+p {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+  /* Make paragraphs more readable */
+  margin-bottom: 20px;
+}
+
+span {
+  color: #f39c12;
+  /* Use a bright color like yellow to highlight text */
+  font-weight: bold;
+}
+
+nav {
+  background-color: #ffedd5;
+  /* Warm light color for the navigation bar */
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* Center-align the navigation links */
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+  margin: 0 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  text-decoration: none;
+  color: #333;
+  /* Dark color for the links */
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #f39c12;
+  /* Highlight links with a yellow color on hover */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  margin-bottom: 20px;
+  /* Space below images */
 }
